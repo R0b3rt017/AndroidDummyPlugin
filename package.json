@@ -1,0 +1,21 @@
+{
+  "name": "dummy-android-plugin",
+  "version": "1.0.0",
+  "description": "Dummy Android Plugin",
+  "cordova": {
+    "id": "dummy-android-plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "license": "Apache 2.0"
+}

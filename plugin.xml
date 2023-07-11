@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="dummy-android-plugin"
+    version="1.0.0">
+
+    <name>Dummy Android Plugin</name>
+
+    <description>Dummy Android Plugin</description>
+
+    <license>Apache 2.0</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <platform name="android">
+	
+        <js-module src="www/plugin.js" name="dummy-android-plugin">
+            <clobbers target="dummy-android-plugin" />
+        </js-module>
+		
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="dummy-android-plugin" >
+                <param name="android-package" value="com.dummy.android.dummy_android_plugin"/>
+            </feature>
+        </config-file>
+		
+		<source-file src="src/dummy_android_plugin.java" target-dir="src/com/dummy/android" />
+
+        <resource-file src="drawable-ldpi/pw_notification.png" target="res/drawable-ldpi/pw_notification.png" />
+        <resource-file src="drawable-mdpi/pw_notification.png" target="res/drawable-mdpi/pw_notification.png" />
+        <resource-file src="drawable-hdpi/pw_notification.png" target="res/drawable-hdpi/pw_notification.png" />
+        <resource-file src="drawable-xhdpi/pw_notification.png" target="res/drawable-xhdpi/pw_notification.png" />
+        <resource-file src="drawable-xxhdpi/pw_notification.png" target="res/drawable-xxhdpi/pw_notification.png" />
+        <resource-file src="drawable-xxxhdpi/pw_notification.png" target="res/drawable-xxxhdpi/pw_notification.png" />
+        
+    </platform>
+</plugin>
